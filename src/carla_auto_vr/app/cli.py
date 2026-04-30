@@ -1,4 +1,4 @@
-"""命令行入口。完全兼容原 ``sync_vehicle.py`` 的参数。"""
+"""命令行入口。"""
 
 from __future__ import annotations
 
@@ -78,7 +78,7 @@ def main(argv: list[str] | None = None) -> int:
     ns = build_parser().parse_args(argv)
     level = logging.DEBUG if ns.debug else logging.INFO
     logger = setup_logger(level=level)
-    logger.info("=== CARLA 自动驾驶仿真（重构版）启动 ===")
+    logger.info("=== CARLA 自动驾驶仿真启动 ===")
 
     settings = SimulationSettings.from_namespace(ns)
     try:

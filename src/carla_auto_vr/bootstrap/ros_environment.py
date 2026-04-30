@@ -1,4 +1,4 @@
-"""ROS 自定义消息环境装载（原 setup_env.py 的纯搬运）。"""
+"""ROS 自定义消息环境装载"""
 
 from __future__ import annotations
 

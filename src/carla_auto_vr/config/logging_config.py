@@ -1,4 +1,4 @@
-"""统一日志配置。与原 sync_vehicle.py 顶层一致：同时写文件与终端。"""
+"""统一日志配置"""
 
 from __future__ import annotations
 

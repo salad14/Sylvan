@@ -1,4 +1,4 @@
-"""ROS2 桥接节点（对原 ros_bridge.py 的纯搬运，保持接口与行为一致）。
+"""ROS2 桥接节点。
 
 同时适配 :class:`VehicleDataSource` 协议。
 """
@@ -28,7 +28,7 @@ from .base import VehicleDataSource
 
 
 class ROSBridge(Node, VehicleDataSource):
-    """与原 ROSBridge 接口/行为 1:1 对齐。"""
+    """与ROSBridge 接口/行为 1:1 对齐。"""
 
     name = "ros"
 

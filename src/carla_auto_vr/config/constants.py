@@ -1,4 +1,4 @@
-"""全局常量：与 sync_vehicle.py 中顶层常量完全对齐。"""
+"""全局常量"""
 
 from __future__ import annotations
 

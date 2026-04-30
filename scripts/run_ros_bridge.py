@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""独立启动 ROS 桥接节点（对应原 run_carla_bridge.py）。"""
+"""独立启动 ROS 桥接节点"""
 
 from __future__ import annotations
 

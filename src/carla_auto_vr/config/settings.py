@@ -33,7 +33,7 @@ class SimulationSettings:
 
     @property
     def camera_mode(self) -> str:
-        """'stereo' 或 'mono'；沿用原 sync_vehicle.py 的默认优先级。"""
+        """'stereo' 或 'mono'；根据命令行参数自动选择。默认优先级：mono > stereo。"""
         return "mono" if self.mono_camera else "stereo"
 
     @classmethod
