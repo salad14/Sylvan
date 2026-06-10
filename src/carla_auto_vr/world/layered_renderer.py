@@ -1,6 +1,5 @@
 """分层渲染（建筑/植被/围栏/杆状物/墙壁/护栏）。
 
-整体结构与原 sync_vehicle.py::LayeredRenderer 保持一致，仅把模块级依赖收束。
 """
 
 from __future__ import annotations

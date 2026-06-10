@@ -1,4 +1,4 @@
-"""Pygame 事件翻译：保留原主循环中的所有按键语义。"""
+"""Pygame 事件处理"""
 
 from __future__ import annotations
 
