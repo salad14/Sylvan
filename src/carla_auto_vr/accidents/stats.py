@@ -7,7 +7,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class IncidentStats:
-    """事件发生次数累计。字段名与原 accident_simulation.incident_results 对齐。"""
+    """事件发生次数累计。字段名对应 accident_simulation 统计结果。"""
 
     counters: dict[str, int] = field(
         default_factory=lambda: {

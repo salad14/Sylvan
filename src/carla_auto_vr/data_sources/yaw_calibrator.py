@@ -1,4 +1,4 @@
-"""ROS yaw 偏移校准。完整保留原 _process_json_data 中的校准逻辑。"""
+"""ROS yaw 偏移校准。"""
 
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ def _wrap_deg(angle: float) -> float:
 
 @dataclass
 class YawCalibrator:
-    """首次收到数据时将 ROS yaw 与当前 CARLA yaw 对齐。"""
+    """首次收到数据时根据当前 CARLA yaw 校准 ROS yaw。"""
 
     calibrated: bool = False
     offset: float = 0.0

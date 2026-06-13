@@ -13,7 +13,7 @@ def _ensure_src_on_path() -> None:
     if os.path.isdir(src) and src not in sys.path:
         sys.path.insert(0, src)
     if root not in sys.path:
-        sys.path.insert(0, root)  # 便于 accidents.manager 加载旧的 AccidentSimulation
+        sys.path.insert(0, root)  # 便于 accidents.manager 加载 AccidentSimulation
 
 
 if __name__ == "__main__":

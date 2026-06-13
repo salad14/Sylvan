@@ -1,4 +1,4 @@
-"""把 JSON 风格的 ROS 数据应用到 CARLA 车辆。对齐原 _process_json_data。"""
+"""把 JSON 风格的 ROS 数据应用到 CARLA 车辆。"""
 
 from __future__ import annotations
 

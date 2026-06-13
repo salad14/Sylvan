@@ -13,8 +13,8 @@ _logger = get_logger()
 class ActorRegistry:
     """按可选标签登记 actor，并统一销毁。
 
-    替代原 sync_vehicle.py 中散乱的 ``self.actor_list`` / ``self.camera`` /
-    ``self.left_camera`` / ``self.vehicle`` 等资源。
+    管理 ``self.actor_list`` / ``self.camera`` /
+    ``self.left_camera`` / ``self.vehicle`` 等类型的资源。
     """
 
     def __init__(self) -> None:

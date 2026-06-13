@@ -1,4 +1,4 @@
-"""HUD/文字渲染。对齐原 sync_vehicle.py 主循环中的 HUD 绘制块。"""
+"""HUD/文字渲染。"""
 
 from __future__ import annotations
 
@@ -27,7 +27,7 @@ def render_hud(
     ros_data_fresh: bool = False,
     accident_active: bool = False,
 ) -> None:
-    """把状态文本绘制到 display。保持原布局与字体。"""
+    """把状态文本绘制到 display。使用固定布局与字体。"""
     lines = [
         f"Speed: {speed_kmh:.1f} km/h",
         f"Yaw: {yaw:.1f} deg",

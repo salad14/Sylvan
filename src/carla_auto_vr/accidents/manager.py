@@ -2,11 +2,11 @@
 
 当前设计为适配层：对外暴露干净的 ``AccidentManager`` 接口，内部将复杂的状态机
 逻辑委托给仓库根目录下已经经过验证的 :class:`accident_simulation.AccidentSimulation`
-实现（用户要求保留旧文件不动）。这样做的目的是：
+实现。这样做的目的是：
 
-* 新代码仍然按功能域划分（事故域独立）；
-* 完全保留原有事故触发/恢复/统计的行为；
-* 后续可以按场景继续把内部实现逐步搬进 ``scenarios/`` 子目录。
+* 按功能域划分（事故域独立）；
+* 保持事故触发/恢复/统计的行为稳定；
+* 后续可以按场景继续完善 ``scenarios/`` 子目录。
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ _logger = get_logger()
 
 
 def _ensure_legacy_on_path() -> None:
-    """把仓库根目录加入 ``sys.path``，以便导入旧的 ``accident_simulation``。"""
+    """把仓库根目录加入 ``sys.path``，以便导入 ``accident_simulation``。"""
     here = os.path.dirname(os.path.abspath(__file__))
     # 当前文件位于 src/carla_auto_vr/accidents/manager.py，向上四层到仓库根
     candidate_roots = [
@@ -75,7 +75,7 @@ class AccidentManager:
     def update(self, current_time: float | None = None) -> bool:
         """在主循环中按原频率调用。
 
-        兼容旧 ``AccidentSimulation.update(current_time)`` 的签名；
+        兼容 ``AccidentSimulation.update(current_time)`` 的签名；
         默认使用 ``time.time()``，也允许调用方传入同步时钟以保持确定性。
         """
         if self._legacy is None:
@@ -84,7 +84,7 @@ class AccidentManager:
             current_time = time.time()
         try:
             result = self._legacy.update(current_time)
-            # legacy.update 很多分支返回 None；统一为 bool
+            # update 很多分支返回 None；统一为 bool
             return bool(result) if result is not None else True
         except Exception as e:  # noqa: BLE001
             _logger.warning(f"事故模拟 update 出错: {e}")

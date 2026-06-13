@@ -1,4 +1,4 @@
-"""特斯拉风格双目摄像头。参数 1:1 对齐原 _setup_stereo_camera。"""
+"""特斯拉风格双目摄像头。"""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ _logger = get_logger()
 class StereoCameraRig(SensorRig):
     mode = "stereo"
 
-    # 参数与原文件完全一致
+    # 双目摄像头视场参数
     L_FOV = 100.0
     R_FOV = 100.0
 

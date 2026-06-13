@@ -50,7 +50,7 @@ class CarlaClient:
         _logger.info(f"已成功连接到CARLA服务器: {self.host}:{self.port}")
 
     def apply_sync_settings(self, fps: int = FPS) -> None:
-        """开启同步模式 + 物理子步进（与原实现一致）。"""
+        """开启同步模式 + 物理子步进。"""
         assert self.world is not None
         try:
             settings = self.world.get_settings()
@@ -67,7 +67,7 @@ class CarlaClient:
             raise
 
     def ensure_sync_and_traffic_manager(self, fps: int = FPS) -> carla.TrafficManager:
-        """运行期重新确认同步与交通管理器状态（对应原 run/run_with_json_file）。"""
+        """运行期重新确认同步与交通管理器状态。"""
         assert self.client is not None and self.world is not None
         settings = self.world.get_settings()
         if not settings.synchronous_mode:

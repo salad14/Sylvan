@@ -28,7 +28,7 @@ def spawn_ego_vehicle(
     is_opendrive_map: bool = False,
     map_argument: str = "",
 ) -> carla.Actor:
-    """按原 ``_setup_vehicle`` 行为生成特斯拉主车。
+    """生成特斯拉主车。
 
     - 优先使用 ``vehicle.tesla.model3``；退化为其他 Tesla；最终退化为随机车辆。
     - 在 Motorway.xodr 模式下优先使用首选生成点，剩余点打乱。

@@ -1,4 +1,4 @@
-"""交通锥布置（原 _spawn_traffic_cones）。"""
+"""交通锥布置。"""
 
 from __future__ import annotations
 

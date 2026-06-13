@@ -1,4 +1,4 @@
-"""OpenDRIVE 模式下的静态车辆布置（原 _setup_static_vehicles）。"""
+"""OpenDRIVE 模式下的静态车辆布置。"""
 
 from __future__ import annotations
 

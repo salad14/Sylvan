@@ -28,7 +28,7 @@ from .base import VehicleDataSource
 
 
 class ROSBridge(Node, VehicleDataSource):
-    """与ROSBridge 接口/行为 1:1 对齐。"""
+    """ROSBridge 数据源实现。"""
 
     name = "ros"
 
@@ -103,7 +103,7 @@ class ROSBridge(Node, VehicleDataSource):
     def poll(self) -> Optional[dict]:
         return self.get_latest_data()
 
-    # ---------- 原 ROSBridge 的其他方法 ----------
+    # ---------- ROSBridge 辅助方法 ----------
     def start_ros_spin_thread(self) -> None:
         self.get_logger().info("启动ROS消息处理线程...")
         self.ros_spin_thread = threading.Thread(target=self._ros_spin)
@@ -253,7 +253,7 @@ class ROSBridge(Node, VehicleDataSource):
 
 
 def main(args=None):  # noqa: ANN001
-    """等价于原 ros_bridge.main，作为 console_scripts 入口。"""
+    """console_scripts 入口。"""
     try:
         rclpy.init(args=args)
         bridge = ROSBridge()

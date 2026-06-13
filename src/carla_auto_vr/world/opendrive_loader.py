@@ -1,4 +1,4 @@
-"""OpenDRIVE (.xodr) 地图加载（原 _load_opendrive_map 的搬运）。"""
+"""OpenDRIVE (.xodr) 地图加载。"""
 
 from __future__ import annotations
 

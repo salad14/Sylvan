@@ -1,4 +1,4 @@
-"""动态 AI 车辆与行人（原 _setup_traffic）。"""
+"""动态 AI 车辆与行人。"""
 
 from __future__ import annotations
 

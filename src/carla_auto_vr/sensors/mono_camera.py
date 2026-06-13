@@ -1,4 +1,4 @@
-"""单目摄像头（全宽）。参数 1:1 对齐原 _setup_mono_camera。"""
+"""单目摄像头（全宽）。"""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ _logger = get_logger()
 class MonoCameraRig(SensorRig):
     mode = "mono"
 
-    # 原代码中 FOV 属性初始化为 100.0，_setup_mono_camera 里实际设置 110.0
+    # 单目摄像头视场参数
     FOV = 110.0
 
     def __init__(self) -> None:
